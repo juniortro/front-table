@@ -3,11 +3,16 @@ import './App.css';
 // Components
 import Header from '../src/components/Header'
 
+// Templates
+import DefaultTemplate from '../src/templates/DefaultTemplate'
+
 function App() {
   return (
-    <div className="App">
+    <>
       <Header />
-    </div>
+      <DefaultTemplate>
+      </DefaultTemplate>
+    </>
   );
 }
 
