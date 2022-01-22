@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Header />
-      <DefaultTemplate>
+      <DefaultTemplate title="Funcionários" isSearchBox>
       </DefaultTemplate>
     </>
   );

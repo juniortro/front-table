@@ -1,0 +1,5 @@
+.default-template {
+    background: #f0f0f0;
+    width: 100%;
+    height: calc(100vh - 60px);
+}
