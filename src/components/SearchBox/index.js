@@ -1,14 +1,17 @@
-import React from "react"
+import React, { useState } from "react"
 
-import searchIcon from '../../assets/images/searchIcon.svg'
+import { AiOutlineSearch } from 'react-icons/ai'
 
 import './styles.css'
 
 const SearchBox = () => {
-    return(
+    const [query, setQuery] = useState('')
+
+    return (
         <div className="searchbox">
-            <input type="text" />
-            <img src={searchIcon} alt="" />
+            <input type="text" placeholder="Pesquisar" onChange={e => setQuery(e.target.value)} />
+
+            <AiOutlineSearch size={22} className="searchIcon" />
         </div>
     )
 }

@@ -1,20 +1,16 @@
 import React from 'react'
-
-import SearchBox from '../../components/SearchBox'
+import Header from '../../components/Header'
 
 import './styles.css'
 
-const DefaultTemplate = ({title, isSearchBox, children}) => {
-    return(
-        <div className="default-template">
-            <h2>{title}</h2>
-            {isSearchBox 
-            ?
-            <SearchBox />
-            : 
-            <h2>tchau</h2>}
-            {children}
-        </div>
+const DefaultTemplate = ({ children }) => {
+    return (
+        <>
+            <Header />
+            <div className="center">
+                {children}
+            </div>
+        </>
     )
 }
 

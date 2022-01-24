@@ -6,15 +6,20 @@
 }
 
 .searchbox input {
-    width: 280px;
+    width: 300px;
     padding: 15px 20px;
     border: none;
     border-radius: 4px;
     outline: none;
     color: #9e9e9e;
+    font-size: 1.1rem;
 }
 
-.searchbox img {
+.searchbox input::placeholder {
+    color: #9e9e9e;
+}
+
+.searchIcon {
     position: absolute;
     right: 20px;
 }
