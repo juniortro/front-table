@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+
+import AppContext from '../../AppContext/Context'
 
 import './styles.css'
 
 const TableEmployess = ({ employess }) => {
+    const { query } = useContext(AppContext)
     return (
         <table>
             <thead>
@@ -16,7 +19,14 @@ const TableEmployess = ({ employess }) => {
             </thead>
 
             <tbody>
-                {employess.map(employee => {
+                {employess.filter(e => {
+                    if(query == ""){
+                        return e
+                    }
+                    if(e.name.toLowerCase().includes(query.toLowerCase())){
+                        return e
+                    }
+                }).map(employee => {
                     const formatedDate = employee.admission_date.split('T', 1)[0].split('-').reverse().join('/')
                     return (
                         <tr key={employee.id}>

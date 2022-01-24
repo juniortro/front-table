@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
 
+import AppProvider from './AppContext/Provider'
+
+
 import './App.css'
 
 // Components
@@ -16,19 +19,22 @@ function App() {
 
   useEffect(() => {
     fetch(apiURL)
-    .then(res => {
-      return res.json()
-    })
-    .then(data => {
-      setEmployees(data)
-    })
+      .then(res => {
+        return res.json()
+      })
+      .then(data => {
+        setEmployees(data)
+      })
   }, [])
 
   return (
-    <DefaultTemplate>
-      <MainHeader title="Funcionários" isSearchBox />
-      <TableEmployess employess={employess} />
-    </DefaultTemplate>
+    <AppProvider>
+      <DefaultTemplate>
+        <MainHeader title="Funcionários" isSearchBox />
+        <TableEmployess employess={employess} />
+      </DefaultTemplate>
+    </AppProvider>
+
   );
 }
 
