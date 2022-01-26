@@ -1,3 +1,7 @@
+.table {
+    overflow-x: auto;
+}
+
 table {
     table-layout: fixed;
     width: 100%;
@@ -38,3 +42,67 @@ table tbody tr td img {
     border-radius: 50%;
 }
 
+@media (max-width: 768px){
+    th, td {
+        padding: 10px;
+    }
+    thead th:nth-child(1) {
+        width: 10%;
+    }
+      
+    thead th:nth-child(2) {
+        width: 15%;
+    }
+      
+    thead th:nth-child(3) {
+        width: 15%;
+    }
+      
+    thead th:nth-child(4) {
+        width: 20%;
+        margin-bottom: 25px;
+    }
+    thead th:nth-child(5) {
+        width: 20%;
+    }
+
+    tbody td:nth-child(4) {
+        margin-bottom: 25px;
+    }
+
+  .table {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
+  .table thead,
+  .table tbody,
+  .table th,
+  .table td,
+  .table tr {
+    display: block;
+  }
+  .table td,
+  .table th {
+    height: 80px;
+  }
+
+  .table thead {
+    float: left;
+  }
+
+  .table tbody {
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+
+  .table tbody tr {
+    display: inline-block;
+  }
+
+
+}
